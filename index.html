@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Md Jahid - Pagina Personale</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e6ffe6, #ccffcc); /* sfondo bianco-verde chiaro */
+            color: #1b4332; /* verde scuro per il testo */
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #2d6a4f; /* verde principale */
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 4px solid #1b4332;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b7e4c7; /* verde chiaro */
+        }
+
+        section {
+            margin: 60px auto;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 10px;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        a {
+            color: #2d6a4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #40916c;
+        }
+
+        footer {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        aside {
+             flex: 1;
+             margin-left: 10px;
+              background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header e Navigazione -->
+    <header>
+        <h1><strong>CENTRO CULTURALE ISLAMICO BAITUS-SALAT</strong></h1>
+        <h2>MONFALCONE (GO)</h2>
+        <nav>
+            <a href="#detail">About</a>
+            <a href="#study">Study</a>
+            <a href="#interests">Interests</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <img src="data:image/png;base64,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" alt="Foto di Ali Md Jahid">
+    </header>
+
+    <!-- Sezione About -->
+    <aside id="detail">
+        <h2>Chi sono</h2>
+        <p>
+            Ciao! Sono <strong>Ali Md Jahid</strong>, ho <strong>17 anni</strong> e vengo da <strong>Monfalcone</strong>.  
+            Ho origini <strong>bengalesi</strong> 🇧🇩 che porto con orgoglio.  
+            Amo la tecnologia e passo molto tempo a scrivere codice e a capire come funzionano le cose.  
+            Quando non sono davanti al computer, mi trovi su un campo da calcio ⚽💻
+        </p>
+    </aside>
+
+    <!-- Sezione Study -->
+    <section id="study">
+        <h2>I miei studi 📚</h2>
+        <p>
+            Frequento l’<strong>ISIS BEM Einaudi-Marconi</strong> di Staranzano, dove studio informatica, programmazione e reti.  
+            Mi piace imparare nuovi linguaggi e creare progetti digitali.
+        </p>
+        <p>
+            🔗 <a href="https://www.isisbem.it/" target="_blank">Visita il sito ufficiale della scuola</a>
+        </p>
+    </section>
+
+    <!-- Sezione Interests -->
+    <section id="interests">
+        <h2>I miei interessi 🔥</h2>
+        <ul>
+            <li>💻 Programmazione</li>
+            <li>⚽ Calcio</li>
+            <li>📚 Studio</li>
+            <li>🎧 Musica</li>
+            <li>🌍 Scoprire nuove culture</li>
+        </ul>
+    </section>
+
+    <!-- Sezione Contact -->
+    <section id="contact">
+        <h2>Contattami ✉️</h2>
+        <p>Puoi scrivermi alla mia mail scolastica:</p>
+        <p><a href="mailto:md.ali@isisbem.it">md.ali@isisbem.it</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025-2026 Ali Md Jahid – Classe 4IA INFORMATICA</p>
+    </footer>
